@@ -50,7 +50,11 @@ function Home() {
           >
             Projects
           </button>
-          <button className="big-nav hover:text-dark-orange" href="/">
+          <button
+            onClick={() => scrollTo("contact")}
+            className="big-nav hover:text-dark-orange"
+            href="/"
+          >
             Contact
           </button>
         </div>
@@ -118,7 +122,7 @@ function Home() {
             justifyContent: "center",
             borderRadius: "50%",
             backgroundColor: "#BE7C4D",
-            boxShadow: "1px 1px 5px #888888",
+            boxShadow: "1px 1px 5px #000000",
             marginRight: "-15px",
             marginBottom: "-15px",
           }}

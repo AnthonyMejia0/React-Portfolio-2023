@@ -21,11 +21,8 @@ function MobileMenu({ menuOpen, setMenuOpen }) {
   return (
     <div
       id="menu"
-      className="flex items-center justify-evenly max-w-lg ml-auto md:hidden bg-black transition-all"
+      className="flex items-center justify-evenly md:hidden bg-black transition-all"
     >
-      {/* <a className={`nav navLink ${!menuOpen ? "hidden" : ""}`} href="/">
-        Home
-      </a> */}
       <button
         onClick={() => goTo("about")}
         className={`nav navLink ${!menuOpen ? "hidden" : ""}`}
@@ -40,7 +37,11 @@ function MobileMenu({ menuOpen, setMenuOpen }) {
       >
         Projects
       </button>
-      <button className={`nav navLink ${!menuOpen ? "hidden" : ""}`} href="/">
+      <button
+        onClick={() => goTo("contact")}
+        className={`nav navLink ${!menuOpen ? "hidden" : ""}`}
+        href="/"
+      >
         Contact
       </button>
     </div>
