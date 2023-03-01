@@ -8,7 +8,19 @@
   }
 
   .about-p {
-    @apply mt-10 lg:max-w-[65%] text-xl lg:text-2xl text-gray-500 font-semibold leading-relaxed tracking-wide font-playfair;
+    @apply mt-10 text-xl xl:my-14 lg:text-2xl text-gray-500 text-justify 2xl:text-justify font-semibold leading-relaxed tracking-wide font-playfair;
+  }
+
+  .project-p {
+    @apply mt-3 lg:max-w-[65%] text-xl lg:text-2xl text-gray-500 font-semibold leading-relaxed tracking-wide font-playfair;
+  }
+
+  .icon {
+    @apply w-20 md:w-[5.5rem] 2xl:w-[5.25rem] hover:rotate-[360deg] transition-all duration-500;
+  }
+
+  .project-button {
+    @apply px-2 py-1 bg-dark-blue rounded text-white hover:bg-dark-orange font-playfair tracking-wider text-base;
   }
 }
 
@@ -20,4 +32,20 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: "#FAF9F6";
+}
+
+input {
+  width: 100%;
+  padding: 5px;
+  background: #000;
+  border-bottom: 2px solid gray;
+  caret-color: white;
+  color: white;
+  font-family: "Playfair Display", serif;
+  letter-spacing: 0.025em;
+}
+
+input:focus {
+  border-color: white;
+  outline: none;
 }
