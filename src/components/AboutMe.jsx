@@ -2,17 +2,18 @@ import React from "react";
 
 function AboutMe() {
   return (
-    <div id="about" className="relative mx-10 lg:mx-20 mb-52">
-      <div className="2xl:hidden xs:w-full sm:w-[20rem] md:w-[21rem] h-[19rem] overflow-hidden rounded-lg opacity-80 hover:opacity-100 transition-all mb-10">
+    <div id="about" className="relative mx-10 lg:mx-20 2xl:mx-32">
+      <div className="w-[75%] max-w-[375px] rounded-full overflow-hidden opacity-80 mx-auto mb-10">
         <img
-          className="w-full aspect-auto rounded-lg"
           src="https://firebasestorage.googleapis.com/v0/b/photo-storage-c9aa3.appspot.com/o/users%2FLFY5EeJo8nUoxlr5JslEEefXrUB2%2Fimages%2F20180220_211309.jpg?alt=media&token=113a30e0-5083-4c33-883b-285d57d3cc31"
           alt="Anthony Mejia"
         />
       </div>
-      <h2 className="font-bold text-3xl lg:text-5xl text-dark-blue pr-2 pb-1 w-max font-playfair shadow-highlight">
+
+      <h2 className="mx-auto font-bold text-3xl lg:text-5xl text-dark-blue w-max font-playfair">
         A Little About Me
       </h2>
+
       <p className="about-p">
         I'm 26 years old and have a Bachelor's Degree in Computer Science from
         UC Riverside. I know learning is a never ending process, so I do my best
@@ -31,14 +32,6 @@ function AboutMe() {
         or listen to music. I am currently looking for an opportunity to begin
         my career and look forward to putting my acquired knowledge to use.
       </p>
-
-      <div className="hidden absolute 2xl:block top-1/2 -translate-y-1/2 right-0 w-[26rem] h-auto overflow-hidden rounded-lg opacity-80 hover:opacity-100 transition-all mb-10">
-        <img
-          className="w-full aspect-auto rounded-lg"
-          src="https://firebasestorage.googleapis.com/v0/b/photo-storage-c9aa3.appspot.com/o/users%2FLFY5EeJo8nUoxlr5JslEEefXrUB2%2Fimages%2F20180220_211309.jpg?alt=media&token=113a30e0-5083-4c33-883b-285d57d3cc31"
-          alt="Anthony Mejia"
-        />
-      </div>
     </div>
   );
 }
