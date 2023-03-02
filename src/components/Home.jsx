@@ -12,6 +12,18 @@ function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
+    gsap.from(".side", {
+      duration: 1,
+      x: -50,
+    });
+
+    gsap.to(".side", {
+      duration: 1,
+      x: 0,
+    });
+  }, []);
+
+  useEffect(() => {
     gsap.from(".big-nav", {
       duration: 1.5,
       opacity: 0,
@@ -24,7 +36,7 @@ function Home() {
     <div id="home">
       <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="relative w-screen h-screen">
-        <div className="absolute -rotate-90 top-20 left-[-45px] font-cursive text-lg tracking-wider text-dark-blue">
+        <div className="side absolute -rotate-90 top-20 left-[-45px] font-cursive text-lg tracking-wider text-dark-blue">
           Anthony Mejia.
         </div>
 
@@ -84,7 +96,7 @@ function Home() {
           </div>
         </div>
 
-        <div className="absolute top-1/2 -translate-y-1/2 left-2 flex flex-col space-y-5 text-dark-blue">
+        <div className="side absolute top-1/2 -translate-y-1/2 left-2 flex flex-col space-y-5 text-dark-blue">
           <a
             href="https://github.com/AnthonyMejia0"
             target="_blank"
