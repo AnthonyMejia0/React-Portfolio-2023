@@ -5,6 +5,7 @@ function AboutMe() {
     <div id="about" className="relative mx-10 lg:mx-20 2xl:mx-32">
       <div className="w-[75%] max-w-[375px] rounded-full overflow-hidden opacity-80 mx-auto mb-10">
         <img
+          className="scale-105"
           src="https://firebasestorage.googleapis.com/v0/b/photo-storage-c9aa3.appspot.com/o/users%2FLFY5EeJo8nUoxlr5JslEEefXrUB2%2Fimages%2F20180220_211309.jpg?alt=media&token=113a30e0-5083-4c33-883b-285d57d3cc31"
           alt="Anthony Mejia"
         />
