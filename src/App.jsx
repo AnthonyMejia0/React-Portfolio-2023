@@ -12,7 +12,7 @@ function App() {
   }, []);
 
   return (
-    <div className="w-screen overflow-hidden">
+    <div>
       <Home />
       <AboutMe />
       <Skills />
