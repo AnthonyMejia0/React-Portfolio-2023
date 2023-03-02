@@ -122,7 +122,6 @@ function Home() {
             justifyContent: "center",
             borderRadius: "50%",
             backgroundColor: "#BE7C4D",
-            boxShadow: "1px 1px 5px #000000",
             marginRight: "-15px",
             marginBottom: "-15px",
           }}
