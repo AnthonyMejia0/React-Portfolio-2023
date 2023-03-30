@@ -2,14 +2,19 @@ import React, { useEffect, useState } from "react";
 import { BiMenuAltLeft } from "react-icons/bi";
 import { IoClose } from "react-icons/io5";
 import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
+import { MdOutlineDarkMode } from "react-icons/md";
+import { BsSun } from "react-icons/bs";
 import Typewriter from "typewriter-effect";
 import MobileMenu from "./MobileMenu";
 import gsap from "gsap";
 import { scrollTo } from "../scroll";
 import ScrollToTop from "react-scroll-to-top";
+import { useRecoilState } from "recoil";
+import { darkState } from "../atoms/darkAtom";
 
 function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [darkMode, setDarkMode] = useRecoilState(darkState);
 
   useEffect(() => {
     gsap.from(".side", {
@@ -36,19 +41,45 @@ function Home() {
     <div id="home">
       <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="relative w-screen h-screen">
-        <div className="side absolute -rotate-90 top-20 left-[-45px] font-cursive text-lg tracking-wider text-dark-blue">
+        <div
+          className={`side absolute -rotate-90 top-20 left-[-45px] font-cursive text-lg tracking-wider ${
+            darkMode ? "text-offwhite" : "text-dark-blue"
+          }`}
+        >
           Anthony Mejia.
         </div>
 
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden absolute top-4 right-3 text-dark-blue"
+        <div
+          className={`flex space-x-3 md:hidden absolute top-4 right-3 ${
+            darkMode ? "text-offwhite" : "text-dark-blue"
+          }`}
         >
-          {!menuOpen && <BiMenuAltLeft size={38} />}
-          {menuOpen && <IoClose size={34} />}
-        </button>
+          <button
+            className="hover:text-dark-orange"
+            onClick={() => setDarkMode(!darkMode)}
+          >
+            {darkMode ? <BsSun size={24} /> : <MdOutlineDarkMode size={24} />}
+          </button>
+          <button
+            className="hover:text-dark-orange"
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            {!menuOpen && <BiMenuAltLeft size={38} />}
+            {menuOpen && <IoClose size={34} />}
+          </button>
+        </div>
 
-        <div className="hidden md:flex space-x-8 w-min ml-auto pt-5 mr-10 text-dark-blue font-cursive text-xl">
+        <div
+          className={`hidden md:flex space-x-8 items-center justify-center w-min ml-auto pt-5 mr-10 font-cursive text-xl ${
+            darkMode ? "text-offwhite" : "text-dark-blue"
+          }`}
+        >
+          <button
+            className="hover:text-dark-orange"
+            onClick={() => setDarkMode(!darkMode)}
+          >
+            {darkMode ? <BsSun /> : <MdOutlineDarkMode />}
+          </button>
           <button
             onClick={() => scrollTo("about")}
             className="big-nav hover:text-dark-orange"
@@ -75,7 +106,11 @@ function Home() {
           <h2 className="welcome font-semibold text-3xl lg:text-5xl text-gray-500">
             WELCOME.
           </h2>
-          <h1 className="text-5xl lg:text-[5rem] font-semibold text-dark-blue">
+          <h1
+            className={`text-5xl lg:text-[5rem] font-semibold ${
+              darkMode ? "text-offwhite" : "text-dark-blue"
+            }`}
+          >
             I'm Anthony
           </h1>
           <div className="text-2xl lg:text-4xl text-dark-orange mt-2">
@@ -96,7 +131,11 @@ function Home() {
           </div>
         </div>
 
-        <div className="side absolute top-1/2 -translate-y-1/2 left-2 flex flex-col space-y-5 text-dark-blue">
+        <div
+          className={`side absolute top-1/2 -translate-y-1/2 left-2 flex flex-col space-y-5 ${
+            darkMode ? "text-offwhite" : "text-dark-blue"
+          }`}
+        >
           <a
             href="https://github.com/AnthonyMejia0"
             target="_blank"

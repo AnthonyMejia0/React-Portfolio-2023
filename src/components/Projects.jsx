@@ -1,9 +1,17 @@
+import { useRecoilValue } from "recoil";
+import { darkState } from "../atoms/darkAtom";
 import Project from "./Project";
 
 function Projects() {
+  const darkMode = useRecoilValue(darkState);
+
   return (
     <div id="projects" className="mt-24 mb-40">
-      <h2 className="mx-auto font-bold text-3xl lg:text-5xl text-dark-blue w-max font-playfair mb-16">
+      <h2
+        className={`mx-auto font-bold text-3xl lg:text-5xl w-max font-playfair mb-16 ${
+          darkMode ? "text-offwhite" : "text-dark-blue"
+        }`}
+      >
         Check Out My Work
       </h2>
 
@@ -49,7 +57,7 @@ function Projects() {
         />
 
         <Project
-          color="#000000"
+          color="#ffc726"
           name="Where in The World?"
           tools="React · Typescript · Tailwind · API"
           position="right"

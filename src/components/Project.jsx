@@ -1,4 +1,9 @@
+import { useRecoilValue } from "recoil";
+import { darkState } from "../atoms/darkAtom";
+
 function Project({ color, name, tools, position, img, desc, site, repo }) {
+  const darkMode = useRecoilValue(darkState);
+
   return (
     <div className="">
       <div
@@ -10,11 +15,21 @@ function Project({ color, name, tools, position, img, desc, site, repo }) {
       </div>
 
       <div className="mx-8 -mt-24">
-        <div className="rounded-sm xs:w-full sm:w-[80%] lg:w-[40%] 2xl:w-[45%] mx-auto mb-8">
-          <img src={img} alt={`${name} Screenshot`} />
+        <div className="overflow-hidden rounded-sm xs:w-full sm:w-[80%] lg:w-[40%] 2xl:w-[45%] mx-auto mb-8">
+          <img
+            className="scale-[100.5%]"
+            src={img}
+            alt={`${name} Screenshot`}
+          />
         </div>
         <div className="mb-2">
-          <p className="project-p text-center mx-auto">{desc}</p>
+          <p
+            className={`project-p text-center mx-auto ${
+              darkMode ? "text-gray-400" : "text-gray-500"
+            }`}
+          >
+            {desc}
+          </p>
         </div>
 
         <div className="flex space-x-3 items-center justify-center py-5">
@@ -22,7 +37,11 @@ function Project({ color, name, tools, position, img, desc, site, repo }) {
             href={site}
             target="_blank"
             rel="noreferrer"
-            className="project-button"
+            className={`project-button ${
+              darkMode
+                ? "bg-offwhite text-dark-blue hover:bg-dark-orange hover:text-white"
+                : "bg-dark-blue hover:bg-dark-orange"
+            }`}
           >
             Visit Site
           </a>
@@ -30,7 +49,11 @@ function Project({ color, name, tools, position, img, desc, site, repo }) {
             href={repo}
             target="_blank"
             rel="noreferrer"
-            className="project-button"
+            className={`project-button ${
+              darkMode
+                ? "bg-offwhite text-dark-blue hover:bg-dark-orange hover:text-white"
+                : "bg-dark-blue hover:bg-dark-orange"
+            }`}
           >
             View Github Repo
           </a>

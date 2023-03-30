@@ -1,10 +1,13 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useRecoilValue } from "recoil";
+import { darkState } from "../atoms/darkAtom";
 
 gsap.registerPlugin(ScrollTrigger);
 
 function AboutMe() {
+  const darkMode = useRecoilValue(darkState);
   const imageRef = useRef();
   const pRef = useRef();
 
@@ -35,8 +38,17 @@ function AboutMe() {
   }, []);
 
   return (
-    <div id="about" className="relative mx-10 mt-5 lg:mx-20 2xl:mx-32">
-      <div className="w-[75%] max-w-[375px] rounded-[50%] overflow-hidden opacity-80 mx-auto mb-10">
+    <div
+      id="about"
+      className={`relative mx-10 mt-5 lg:mx-20 2xl:mx-32 ${
+        darkMode ? "text-gray-400" : "text-gray-500"
+      }`}
+    >
+      <div
+        className={`w-[75%] max-w-[375px] rounded-[50%] overflow-hidden mx-auto mb-10 ${
+          darkMode ? "opacity-100" : "opacity-80"
+        }`}
+      >
         <img
           ref={imageRef}
           className="scale-105"
@@ -45,7 +57,11 @@ function AboutMe() {
         />
       </div>
 
-      <h2 className="mx-auto font-bold text-3xl lg:text-5xl text-dark-blue w-max font-playfair">
+      <h2
+        className={`mx-auto font-bold text-3xl lg:text-5xl w-max font-playfair ${
+          darkMode ? "text-offwhite" : "text-dark-blue"
+        }`}
+      >
         A Little About Me
       </h2>
 
