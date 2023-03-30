@@ -4,15 +4,15 @@
 
 @layer components {
   .navLink {
-    @apply text-white hover:text-dark-orange hover:scale-95 opacity-100;
+    @apply hover:text-dark-orange hover:scale-95 opacity-100;
   }
 
   .about-p {
-    @apply mt-10 text-xl xl:my-14 lg:text-2xl text-gray-500 text-center 2xl:text-justify font-semibold leading-relaxed tracking-wide font-playfair;
+    @apply mt-10 text-xl xl:my-14 lg:text-2xl text-center 2xl:text-justify font-semibold leading-relaxed tracking-wide font-playfair;
   }
 
   .project-p {
-    @apply mt-3 lg:max-w-[65%] text-xl lg:text-2xl text-gray-500 font-semibold leading-relaxed tracking-wide font-playfair;
+    @apply mt-3 lg:max-w-[65%] text-xl lg:text-2xl font-semibold leading-relaxed tracking-wide font-playfair;
   }
 
   .icon {
@@ -20,7 +20,7 @@
   }
 
   .project-button {
-    @apply px-2 py-1 bg-dark-blue rounded text-white hover:bg-dark-orange font-playfair tracking-wider text-base;
+    @apply px-2 py-1 rounded text-white font-playfair tracking-wider text-base;
   }
 }
 
@@ -31,9 +31,9 @@ html::-webkit-scrollbar {
 
 /* Hide scrollbar for IE, Edge and Firefox */
 html {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-} 
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
 
 body {
   margin: 0;
@@ -42,7 +42,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: "#FAF9F6";
 }
 
 input {
