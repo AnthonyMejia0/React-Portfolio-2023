@@ -1,4 +1,6 @@
 import { useEffect } from "react";
+import { useRecoilValue } from "recoil";
+import { darkState } from "./atoms/darkAtom";
 import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
@@ -11,8 +13,14 @@ function App() {
     scrollTo("home", "auto");
   }, []);
 
+  const darkMode = useRecoilValue(darkState);
+
   return (
-    <div>
+    <div
+      className={`${
+        darkMode ? "bg-dark" : "bg-offwhite"
+      } transition-all ease-in-out duration-700`}
+    >
       <Home />
       <AboutMe />
       <Skills />
