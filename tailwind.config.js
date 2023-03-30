@@ -13,6 +13,7 @@ module.exports = {
         "dark-blue": "#02021d",
         "dark-orange": "#BE7C4D",
         offwhite: "#FAF9F6",
+        dark: "#121212",
       },
 
       fontFamily: {
