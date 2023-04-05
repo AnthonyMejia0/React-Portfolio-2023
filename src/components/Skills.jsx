@@ -1,8 +1,28 @@
-import React from "react";
+import { gsap } from "gsap";
+import React, { useEffect, useRef } from "react";
 
 function Skills() {
+  const skillsRef = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      skillsRef.current,
+      { opacity: 0 },
+      {
+        opacity: 100,
+        duration: 200,
+        scrollTrigger: {
+          trigger: skillsRef.current,
+        },
+      }
+    );
+  }, []);
+
   return (
-    <div className="mt-14 2xl:mt-16 xl:mx-[5rem] grid grid-cols-3 content-center justify-items-center gap-y-8 lg:gap-10 xl:flex xl:flex-nowrap xl:justify-between xl:gap-0">
+    <div
+      ref={skillsRef}
+      className="mt-14 2xl:mt-16 xl:mx-[5rem] grid grid-cols-3 content-center justify-items-center gap-y-8 lg:gap-10 xl:flex xl:flex-nowrap xl:justify-between xl:gap-0"
+    >
       <img
         className="icon"
         src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"
