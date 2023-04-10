@@ -151,7 +151,7 @@ function SoftwareProjects() {
 
       <SoftwareProject
         title="Ray Tracer"
-        description="Ray Tracing project which take predefined image specifications and applies ambient, diffuse, and specular lighting as well as shadows and reflection. Reflection recursion is modifiable to allow for a greater or lesser effect."
+        description="Ray Tracing project which takes predefined image specifications and applies ambient, diffuse, and specular lighting as well as shadows and reflection. Reflection recursion is modifiable to allow for a greater or lesser effect."
         languages={
           <ul>
             <li>C++</li>
