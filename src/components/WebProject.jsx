@@ -1,7 +1,7 @@
 import { useRecoilValue } from "recoil";
 import { darkState } from "../atoms/darkAtom";
 
-function Project({ color, name, tools, position, img, desc, site, repo }) {
+function WebProject({ color, name, tools, position, img, desc, site, repo }) {
   const darkMode = useRecoilValue(darkState);
 
   return (
@@ -63,4 +63,4 @@ function Project({ color, name, tools, position, img, desc, site, repo }) {
   );
 }
 
-export default Project;
+export default WebProject;
