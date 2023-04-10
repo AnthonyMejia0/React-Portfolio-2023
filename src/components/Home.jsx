@@ -3,7 +3,7 @@ import { BiMenuAltLeft } from "react-icons/bi";
 import { IoClose } from "react-icons/io5";
 import { AiFillGithub, AiFillLinkedin, AiFillYoutube } from "react-icons/ai";
 import { MdOutlineDarkMode } from "react-icons/md";
-import { BsSun } from "react-icons/bs";
+import { FiSun } from "react-icons/fi";
 import Typewriter from "typewriter-effect";
 import MobileMenu from "./MobileMenu";
 import gsap from "gsap";
@@ -58,7 +58,7 @@ function Home() {
             className="hover:text-dark-orange"
             onClick={() => setDarkMode(!darkMode)}
           >
-            {darkMode ? <BsSun size={24} /> : <MdOutlineDarkMode size={24} />}
+            {darkMode ? <FiSun size={24} /> : <MdOutlineDarkMode size={24} />}
           </button>
           <button
             className="hover:text-dark-orange"
@@ -74,12 +74,23 @@ function Home() {
             darkMode ? "text-offwhite" : "text-dark-blue"
           }`}
         >
-          <button
-            className="hover:text-dark-orange"
-            onClick={() => setDarkMode(!darkMode)}
-          >
-            {darkMode ? <BsSun /> : <MdOutlineDarkMode />}
-          </button>
+          <div className="flex items-center space-x-2">
+            <MdOutlineDarkMode size={13} />
+            <button
+              onClick={() => setDarkMode(!darkMode)}
+              className={`relative h-3 w-6 rounded-full ${
+                darkMode ? "bg-gray-500" : "bg-dark-orange"
+              }`}
+            >
+              <div
+                className={`absolute bg-white h-3 w-3 rounded-full top-0 ${
+                  darkMode ? "left-0" : "right-0"
+                }`}
+              ></div>
+            </button>
+            <FiSun size={13} />
+          </div>
+
           <button
             onClick={() => scrollTo("about")}
             className="big-nav hover:text-dark-orange"
@@ -120,8 +131,8 @@ function Home() {
                 strings: [
                   "Web Developer.",
                   "Software Developer.",
+                  "Freelancer.",
                   "Tech Enthusiast.",
-                  "",
                 ],
                 autoStart: true,
                 loop: true,
