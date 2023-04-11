@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useRecoilValue } from "recoil";
 import { darkState } from "../atoms/darkAtom";
+import Me from "../images/Anthony.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,8 +52,8 @@ function AboutMe() {
       >
         <img
           ref={imageRef}
-          className="scale-105"
-          src="https://firebasestorage.googleapis.com/v0/b/photo-storage-c9aa3.appspot.com/o/users%2FLFY5EeJo8nUoxlr5JslEEefXrUB2%2Fimages%2F20180220_211309.jpg?alt=media&token=113a30e0-5083-4c33-883b-285d57d3cc31"
+          className="scale-105 w-full h-full"
+          src={Me}
           alt="Anthony Mejia"
         />
       </div>
