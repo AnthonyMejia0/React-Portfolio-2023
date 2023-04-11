@@ -34,6 +34,10 @@
   .project-button {
     @apply px-2 py-1 rounded text-white font-playfair tracking-wider text-base;
   }
+
+  .text-shadow {
+    @apply drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)];
+  }
 }
 
 /* Hide scrollbar for Chrome, Safari and Opera */
