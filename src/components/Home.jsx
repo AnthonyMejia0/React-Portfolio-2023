@@ -77,6 +77,7 @@ function Home() {
           <div className="flex items-center space-x-2">
             <MdOutlineDarkMode size={13} />
             <button
+              aria-label="dark mode toggle"
               onClick={() => setDarkMode(!darkMode)}
               className={`relative h-3 w-6 rounded-full ${
                 darkMode ? "bg-gray-500" : "bg-dark-orange"
@@ -148,6 +149,7 @@ function Home() {
           }`}
         >
           <a
+            aria-label="Visit My GitHub"
             href="https://github.com/AnthonyMejia0"
             target="_blank"
             rel="noreferrer"
@@ -156,6 +158,7 @@ function Home() {
             <AiFillGithub size={18} />
           </a>
           <a
+            aria-label="Visit My LinkedIn"
             href="https://www.linkedin.com/in/anthony-mejia-84169b172"
             target="_blank"
             rel="noreferrer"
@@ -164,6 +167,7 @@ function Home() {
             <AiFillLinkedin size={18} />
           </a>
           <a
+            aria-label="Visit My YouTube Page"
             href="https://www.youtube.com/channel/UCqfTZe21vlUhOUqeR59bxcQ"
             target="_blank"
             rel="noreferrer"
