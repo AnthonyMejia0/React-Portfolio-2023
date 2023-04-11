@@ -16,7 +16,7 @@
   }
 
   .icon {
-    @apply w-20 md:w-[4.5rem] lg:w-[5rem] 2xl:w-[5.25rem];
+    @apply w-20 md:w-[4.5rem] lg:w-[5rem] 2xl:w-[5.25rem] min-w-fit min-h-fit;
   }
 
   .project-icon {

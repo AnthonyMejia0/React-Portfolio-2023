@@ -17,7 +17,7 @@ function WebProject({ color, name, tools, position, img, desc, site, repo }) {
       <div className="mx-8 -mt-24">
         <div className="overflow-hidden rounded-sm xs:w-full sm:w-[80%] lg:w-[40%] 2xl:w-[45%] mx-auto mb-8 shadow">
           <img
-            className="scale-[100.7%]"
+            className="scale-[100.7%] w-full h-full"
             src={img}
             alt={`${name} Screenshot`}
           />
