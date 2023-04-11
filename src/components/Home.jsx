@@ -55,12 +55,14 @@ function Home() {
           }`}
         >
           <button
+            aria-label="dark mode toggle"
             className="hover:text-dark-orange"
             onClick={() => setDarkMode(!darkMode)}
           >
             {darkMode ? <FiSun size={24} /> : <MdOutlineDarkMode size={24} />}
           </button>
           <button
+            aria-label="Menu"
             className="hover:text-dark-orange"
             onClick={() => setMenuOpen(!menuOpen)}
           >
