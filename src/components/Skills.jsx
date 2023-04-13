@@ -10,7 +10,7 @@ function Skills() {
       { opacity: 0 },
       {
         opacity: 100,
-        duration: 200,
+        duration: 250,
         scrollTrigger: {
           trigger: skillsRef.current,
         },
