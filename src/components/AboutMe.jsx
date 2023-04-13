@@ -18,7 +18,7 @@ function AboutMe() {
       { opacity: 0 },
       {
         opacity: 1,
-        duration: 2,
+        duration: 2.5,
         scrollTrigger: {
           trigger: imageRef.current,
         },
@@ -27,10 +27,10 @@ function AboutMe() {
 
     gsap.fromTo(
       pRef.current,
-      { y: 100 },
+      { y: 150 },
       {
         y: 0,
-        duration: 0.5,
+        duration: 0.75,
         scrollTrigger: {
           trigger: pRef.current,
         },
