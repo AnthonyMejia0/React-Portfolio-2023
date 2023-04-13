@@ -3,26 +3,10 @@ import { darkState } from "../atoms/darkAtom";
 import WebProjects from "./WebProjects";
 import { projectsState } from "../atoms/projectsAtom";
 import SoftwareProjects from "./SoftwareProjects";
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
 
 function Projects() {
   const darkMode = useRecoilValue(darkState);
   const [projectsPage, setProjectsPage] = useRecoilState(projectsState);
-  const projectsRef = useRef();
-
-  useEffect(() => {
-    gsap.fromTo(
-      projectsRef.current,
-      { y: 200 },
-      {
-        y: 0,
-        scrollTrigger: {
-          trigger: projectsRef.current,
-        },
-      }
-    );
-  }, []);
 
   return (
     <div id="projects" className="mt-24 mb-40">
@@ -65,15 +49,13 @@ function Projects() {
         </button>
       </div>
 
-      <div ref={projectsRef}>
-        {projectsPage === "Web" ? (
-          <WebProjects />
-        ) : projectsPage === "Software" ? (
-          <SoftwareProjects />
-        ) : (
-          <WebProjects />
-        )}
-      </div>
+      {projectsPage === "Web" ? (
+        <WebProjects />
+      ) : projectsPage === "Software" ? (
+        <SoftwareProjects />
+      ) : (
+        <WebProjects />
+      )}
     </div>
   );
 }

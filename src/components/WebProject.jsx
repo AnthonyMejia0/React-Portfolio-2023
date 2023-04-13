@@ -1,11 +1,28 @@
 import { useRecoilValue } from "recoil";
 import { darkState } from "../atoms/darkAtom";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 
 function WebProject({ color, name, tools, position, img, desc, site, repo }) {
   const darkMode = useRecoilValue(darkState);
+  const projRef = useRef();
+
+  useEffect(() => {
+    gsap.fromTo(
+      projRef.current,
+      { y: 200 },
+      {
+        y: 0,
+        duration: 0.5,
+        scrollTrigger: {
+          trigger: projRef.current,
+        },
+      }
+    );
+  }, []);
 
   return (
-    <div className="">
+    <div ref={projRef}>
       <div
         style={{ backgroundColor: color, textAlign: position }}
         className={`h-56 lg:h-64 z-0 text-white font-playfair tracking-wide py-8 px-10 2xl:pt-16 2xl:pl-20 space-y-1 xl:space-y-3`}

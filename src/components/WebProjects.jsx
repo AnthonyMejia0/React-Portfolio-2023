@@ -1,23 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { WProjects } from "../WebProjectInfo";
-import { gsap } from "gsap";
 import WebProject from "./WebProject";
 
 function WebProjects() {
-  useEffect(() => {
-    gsap.fromTo(
-      ".web-project",
-      {
-        opacity: 0,
-        duration: 150,
-      },
-      {
-        opacity: 100,
-        duration: 150,
-      }
-    );
-  }, []);
-
   return (
     <div className="web-project space-y-20">
       {WProjects.map((project, index) => (
