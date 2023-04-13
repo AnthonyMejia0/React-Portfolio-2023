@@ -42,7 +42,7 @@ function Home() {
       <MobileMenu menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="relative w-screen h-screen">
         <div
-          className={`side absolute -rotate-90 top-20 left-[-45px] font-cursive text-lg tracking-wider ${
+          className={`my-name side absolute -rotate-90 top-20 left-[-45px] font-cursive text-lg tracking-wider ${
             darkMode ? "text-offwhite" : "text-dark-blue"
           }`}
         >
@@ -146,7 +146,7 @@ function Home() {
         </div>
 
         <div
-          className={`side absolute top-1/2 -translate-y-1/2 left-2 flex flex-col space-y-5 ${
+          className={`side absolute top-1/2 -translate-y-1/2 left-3 flex flex-col space-y-5 ${
             darkMode ? "text-offwhite" : "text-dark-blue"
           }`}
         >
