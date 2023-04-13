@@ -88,3 +88,9 @@ ul li {
   font-size: 1.1rem;
   margin-right: 1.5rem;
 }
+
+@media (max-height: 420px) {
+  .my-name {
+    display: none;
+  }
+}
