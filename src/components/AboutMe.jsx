@@ -68,7 +68,7 @@ function AboutMe() {
 
       <div ref={pRef}>
         <p className="about-p">
-          I'm 26 years old and have a Bachelor's Degree in Computer Science from
+          I'm 27 years old and have a Bachelor's Degree in Computer Science from
           UC Riverside. I know learning is a never ending process, so I do my
           best to stay up to date and keep my mind working.
         </p>
