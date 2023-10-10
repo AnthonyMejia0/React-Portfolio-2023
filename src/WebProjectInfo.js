@@ -42,7 +42,7 @@ export const WProjects = [
     position: "right",
     img: WITW,
     desc: "This is a React and Typescript project using the rest countries api allowing users to view country details as well as search for specific countries.",
-    site: "https://rest-api-countries-tau.vercel.app/",
+    site: "https://rest-api-countries-7mlml3v8p-anthonymejia0.vercel.app/",
     repo: "https://github.com/AnthonyMejia0/rest-api-countries",
   },
   {
