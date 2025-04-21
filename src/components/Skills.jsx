@@ -1,5 +1,5 @@
-import { gsap } from "gsap";
-import React, { useEffect, useRef } from "react";
+import { gsap } from 'gsap';
+import React, { useEffect, useRef } from 'react';
 
 function Skills() {
   const skillsRef = useRef();
@@ -14,7 +14,7 @@ function Skills() {
         scrollTrigger: {
           trigger: skillsRef.current,
         },
-      }
+      },
     );
   }, []);
 
@@ -50,7 +50,7 @@ function Skills() {
       />
       <img
         className="icon"
-        src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg"
+        src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
         alt="Tailwind Icon"
       />
       <img
