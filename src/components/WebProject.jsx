@@ -1,7 +1,7 @@
-import { useRecoilValue } from "recoil";
-import { darkState } from "../atoms/darkAtom";
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
+import { useRecoilValue } from 'recoil';
+import { darkState } from '../atoms/darkAtom';
+import { useEffect, useRef } from 'react';
+import { gsap } from 'gsap';
 
 function WebProject({ color, name, tools, position, img, desc, site, repo }) {
   const darkMode = useRecoilValue(darkState);
@@ -17,7 +17,7 @@ function WebProject({ color, name, tools, position, img, desc, site, repo }) {
         scrollTrigger: {
           trigger: projRef.current,
         },
-      }
+      },
     );
   }, []);
 
@@ -42,7 +42,7 @@ function WebProject({ color, name, tools, position, img, desc, site, repo }) {
         <div className="mb-2">
           <p
             className={`project-p text-center mx-auto ${
-              darkMode ? "text-gray-400" : "text-gray-500"
+              darkMode ? 'text-gray-400' : 'text-gray-500'
             }`}
           >
             {desc}
@@ -56,24 +56,26 @@ function WebProject({ color, name, tools, position, img, desc, site, repo }) {
             rel="noreferrer"
             className={`project-button ${
               darkMode
-                ? "bg-offwhite text-dark-blue hover:bg-dark-orange hover:text-white"
-                : "bg-dark-blue hover:bg-dark-orange"
+                ? 'bg-offwhite text-dark-blue hover:bg-dark-orange hover:text-white'
+                : 'bg-dark-blue hover:bg-dark-orange'
             }`}
           >
             Visit Site
           </a>
-          <a
-            href={repo}
-            target="_blank"
-            rel="noreferrer"
-            className={`project-button ${
-              darkMode
-                ? "bg-offwhite text-dark-blue hover:bg-dark-orange hover:text-white"
-                : "bg-dark-blue hover:bg-dark-orange"
-            }`}
-          >
-            View Github Repo
-          </a>
+          {repo && (
+            <a
+              href={repo}
+              target="_blank"
+              rel="noreferrer"
+              className={`project-button ${
+                darkMode
+                  ? 'bg-offwhite text-dark-blue hover:bg-dark-orange hover:text-white'
+                  : 'bg-dark-blue hover:bg-dark-orange'
+              }`}
+            >
+              View Github Repo
+            </a>
+          )}
         </div>
       </div>
     </div>
