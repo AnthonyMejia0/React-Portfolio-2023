@@ -3,7 +3,17 @@ import { darkState } from '../atoms/darkAtom';
 import { useEffect, useRef } from 'react';
 import { gsap } from 'gsap';
 
-function WebProject({ color, name, tools, position, img, desc, site, repo }) {
+function WebProject({
+  color,
+  name,
+  tools,
+  position,
+  img,
+  desc,
+  site,
+  repo,
+  mobileApp,
+}) {
   const darkMode = useRecoilValue(darkState);
   const projRef = useRef();
 
@@ -31,10 +41,14 @@ function WebProject({ color, name, tools, position, img, desc, site, repo }) {
         <p className="font-bold text-shadow">{tools}</p>
       </div>
 
-      <div className="mx-8 -mt-24">
+      <div
+        className={`mx-8 -mt-24 ${
+          tools.split('·').length > 4 && '-mt-10 md:-mt-24'
+        }`}
+      >
         <div className="overflow-hidden rounded-sm xs:w-full sm:w-[80%] lg:w-[40%] 2xl:w-[45%] mx-auto mb-8 shadow">
           <img
-            className="scale-[100.7%] w-full h-full"
+            className={`w-full h-full`}
             src={img}
             alt={`${name} Screenshot`}
           />
@@ -50,18 +64,20 @@ function WebProject({ color, name, tools, position, img, desc, site, repo }) {
         </div>
 
         <div className="flex space-x-3 items-center justify-center py-5">
-          <a
-            href={site}
-            target="_blank"
-            rel="noreferrer"
-            className={`project-button ${
-              darkMode
-                ? 'bg-offwhite text-dark-blue hover:bg-dark-orange hover:text-white'
-                : 'bg-dark-blue hover:bg-dark-orange'
-            }`}
-          >
-            Visit Site
-          </a>
+          {site && (
+            <a
+              href={site}
+              target="_blank"
+              rel="noreferrer"
+              className={`project-button ${
+                darkMode
+                  ? 'bg-offwhite text-dark-blue hover:bg-dark-orange hover:text-white'
+                  : 'bg-dark-blue hover:bg-dark-orange'
+              }`}
+            >
+              {mobileApp === true ? 'View in Play Store' : 'Visit Site'}
+            </a>
+          )}
           {repo && (
             <a
               href={repo}

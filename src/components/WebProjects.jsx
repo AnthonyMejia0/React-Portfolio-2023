@@ -1,6 +1,6 @@
-import React from "react";
-import { WProjects } from "../WebProjectInfo";
-import WebProject from "./WebProject";
+import React from 'react';
+import { WProjects } from '../WebProjectInfo';
+import WebProject from './WebProject';
 
 function WebProjects() {
   return (
@@ -16,6 +16,7 @@ function WebProjects() {
           desc={project.desc}
           site={project.site}
           repo={project.repo}
+          mobileApp={project?.mobileApp}
         />
       ))}
     </div>
