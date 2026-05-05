@@ -5,13 +5,14 @@ import WITW from './images/WITW.webp';
 import Bookmarks from './images/Bookmarks.webp';
 import Devlinks from './images/Devlinks.webp';
 import PrioriT from './images/Priorit.webp';
+import Kanban from './images/Kanban.png';
 
 export const WProjects = [
   {
     color: '#02B7B3',
     name: 'PrioriT: To-Do List & Planner',
     tools: 'React Native · Expo · Typescript · Zustand · Tailwind CSS',
-    position: 'right',
+    position: 'left',
     img: PrioriT,
     desc: 'Take control of your tasks with PrioriT - a streamlined to-do list and planner that helps you focus on what matters most. Perfect for busy professionals, students, or anyone wanting to organize their day better.',
     site: 'https://play.google.com/store/apps/details?id=com.anthill.Priorit&pcampaignid=web_share',
@@ -21,12 +22,22 @@ export const WProjects = [
   {
     color: '#4068d1',
     name: 'Podera (Startup)',
-    tools: 'NextJS · SCSS · AWS · API',
-    position: 'left',
+    tools: 'Next.js · SCSS · AWS · API',
+    position: 'right',
     img: Podera,
     desc: 'An AI-powered full-stack application that transforms articles and blogs into natural-sounding podcast episodes, making written content more accessible and engaging through seamless audio generation.',
     site: '',
     repo: '',
+  },
+  {
+    color: '#635FC7',
+    name: 'Kanban Board',
+    tools: 'Next.js · Typescript · Tailwind CSS · Supabase · Shadcn · dnd-kit',
+    position: 'left',
+    img: Kanban,
+    desc: 'A full-stack kanban board application built with Next.js, Typescript, Tailwind CSS, Supabase, Shadcn, and dnd-kit. It allows users to create boards, lists, and cards to organize tasks and projects efficiently as well as drag and drop tasks to update status.',
+    site: 'https://kanban.anthonymejia.dev/',
+    repo: 'https://github.com/AnthonyMejia0/kanban',
   },
   {
     color: '#014745',
