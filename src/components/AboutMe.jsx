@@ -45,7 +45,7 @@ function AboutMe() {
         darkMode ? 'text-gray-400' : 'text-gray-500'
       }`}
     >
-      <div
+      {/* <div
         className={`w-[75%] max-w-[375px] rounded-[50%] overflow-hidden mx-auto mb-10 ${
           darkMode ? 'opacity-100' : 'opacity-80'
         }`}
@@ -56,7 +56,7 @@ function AboutMe() {
           src={Me}
           alt="Anthony Mejia"
         />
-      </div>
+      </div> */}
 
       <h2
         className={`mx-auto font-bold text-3xl lg:text-5xl w-max font-playfair ${
