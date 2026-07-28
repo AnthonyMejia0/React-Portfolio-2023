@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useRecoilValue } from 'recoil';
 import { darkState } from '../atoms/darkAtom';
-import Me from '../images/Anthony.webp';
+// import Me from '../images/Anthony.webp';
 
 gsap.registerPlugin(ScrollTrigger);
 
